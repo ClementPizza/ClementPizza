@@ -1,51 +1,37 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClementLaPizza - Animation Fond</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ClementLaPizza</title>
     <style>
-        body {
-            background-color: #f8e8c9;
-            margin: 0;
-            overflow: hidden;
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-        header {
-            background-color: #c0392b;
-            color: white;
-            padding: 20px;
-            font-size: 24px;
-            position: relative;
-            z-index: 100;
-        }
-        .bubble {
-            position: absolute;
-            width: 50px;
-            height: 50px;
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/91/Pizza-3007395.png'); /* Image de pizza */
-            background-size: cover;
-            opacity: 0.8;
-            animation: floatUp 5s linear infinite;
-        }
-        @keyframes floatUp {
-            0% { transform: translateY(100vh) scale(0.5); opacity: 0; }
-            100% { transform: translateY(-10vh) scale(1.2); opacity: 1; }
-        }
+      /* On applique un fond d'écran à thème espace.
+         Vous pouvez utiliser une image libre de droits ; ici, l'exemple ci-dessous charge une image aléatoire sur le thème de l'espace depuis Unsplash. */
+      body {
+        margin: 0;
+        padding: 0;
+        background: url("https://source.unsplash.com/1600x900/?space") no-repeat center center fixed;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      /* Style pour le logo placé au centre. 
+         Vous pouvez ajuster la taille en modifiant "max-width" ou d'autres propriétés selon vos besoins. */
+      .logo {
+        max-width: 300px;
+        width: auto;
+      }
     </style>
-</head>
-<body>
-
-    <header>🍕 Bienvenue chez ClementLaPizza 🍕</header>
-
-    <?php
-    for ($i = 0; $i < 20; $i++) {
-        $xPos = rand(0, 100);
-        $delay = rand(0, 5);
-        echo "<div class='bubble' style='left: {$xPos}vw; animation-delay: {$delay}s;'></div>";
-    }
-    ?>
-
-</body>
+  </head>
+  <body>
+    <!-- Votre logo est inséré ici. Le navigateur chargera cette image à partir de l'URL que vous avez fournie -->
+    <img
+      class="logo"
+      src="https://pbs.twimg.com/profile_images/1540454238890909697/wQ6dtynV_400x400.jpg"
+      alt="Logo"
+    />
+  </body>
 </html>
